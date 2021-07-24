@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  web:
+    build: .
+    restart: always
+    volumes:
+      - api-sync:/usr/src/app
+
+volumes:
+  api-sync:
+    external: true
