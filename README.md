@@ -17,7 +17,7 @@ Link to install `docker-sync`: https://docker-sync.readthedocs.io/en/latest/gett
 ## Configure docker-sync
 
 Let’s say you have a Dockerfile and a docker-compose.yaml. A minimal docker-compose.yaml would look something like that:
-`
+```
 version: "3.1"
 services:
   web:
@@ -29,14 +29,14 @@ services:
 volumes:
   api-sync:
     external: true
-`
+```
 
 Create a docker-sync.yaml file and past in this configuration:
-`
+```
 version: "2"
 syncs:
   api-sync:
     sync_strategy: 'native_osx'
     src: '.' #path to the volume you want to synchronise
     host_disk_mount_mode: 'cached'
-`
+```
