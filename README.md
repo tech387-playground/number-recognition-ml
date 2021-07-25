@@ -22,7 +22,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ````
 
-In in install the packages
+If on mac you have to allow the camera to be used by the code in the security section of the mac configuration.
 
 ## Configure docker-sync
 Let’s say you have a Dockerfile and a docker-compose.yaml. A minimal docker-compose.yaml would look something like that:
