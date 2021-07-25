@@ -5,6 +5,11 @@ services:
     restart: always
     volumes:
       - api-sync:/usr/src/app
+    devices:
+        - "/dev/vchiq:/dev/vchiq"
+    privileged: true
+    ports:
+     - "80:80"             #http
 
 volumes:
   api-sync:

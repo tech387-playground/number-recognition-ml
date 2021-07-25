@@ -14,8 +14,17 @@ deserialized, dispatched and executed as a macOS system call by osxfs
 
 Link to install `docker-sync`: https://docker-sync.readthedocs.io/en/latest/getting-started/installation.html
 
-## Configure docker-sync
+We will access the testing script via the terminal since im on mack and docker runs in a VM on mac, that being said it's very hard to open the camera.
 
+Actiave enviornment 
+````
+python3 -m venv .venv
+source .venv/bin/activate
+````
+
+In in install the packages
+
+## Configure docker-sync
 Let’s say you have a Dockerfile and a docker-compose.yaml. A minimal docker-compose.yaml would look something like that:
 ```
 version: "3.1"
@@ -40,3 +49,10 @@ syncs:
     src: '.' #path to the volume you want to synchronise
     host_disk_mount_mode: 'cached'
 ```
+
+## How to use `docker-sync``
+You would have to run `docker-sync sync` every time before you run `docker-compose up` in order to refersh your data.
+
+There is simple comand which runs both of them at the same time, you just have to type `docker-sync-stack start` and it will refresh sync the data and start the `docker-compose up` comand.
+
+
